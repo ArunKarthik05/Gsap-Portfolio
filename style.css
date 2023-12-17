@@ -1,0 +1,311 @@
+@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Oswald:wght@400;500;700&family=Poppins:wght@300;400;500;600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+body {
+  font-family: "Oswald";
+  letter-spacing: 2px;
+  font-size: 3rem;
+  background-color: black;
+  color: white;
+  scroll-behavior: smooth;
+}
+.centre-line {
+  position: absolute;
+  left: 50%;
+  height: 75vh;
+  top: 17%;
+  width: 10px;
+  background-color: red;
+}
+/* ------navbar------- */
+nav {
+  opacity: 0.9;
+  padding: 20px 20px 20px 0;
+  z-index: 2;
+  font-size: 1rem;
+  font-weight: 700;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.nav-right {
+  display: inline-flex;
+}
+.ul {
+  margin-left: 200px;
+  text-align: right;
+}
+li {
+  list-style: none;
+  width: 200px;
+  display: inline-block;
+}
+
+li a {
+  color: white;
+  text-decoration: none;
+}
+.menu {
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  align-self: flex-end;
+}
+.menu a {
+  color: red;
+}
+/* -------------MAIN----------- */
+.main p {
+  font-style: bold;
+  font-weight: 600;
+  opacity: 0;
+}
+.content {
+  /* background-color: yellow; */
+  height: 80vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.img-container {
+  margin-left: 100px;
+  font-size: 5rem;
+  font-weight: 500;
+  opacity: 0.7;
+  width: 50%;
+  position: relative;
+  /* background-color: red; */
+}
+.fst {
+  color: red;
+}
+.fst-rem {
+  color: white;
+}
+.text {
+  /* padding-left: 100px; */
+  opacity: 0.8;
+  /* background-color: blueviolet; */
+}
+#scroll {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: row;
+  /* background-color: white; */
+}
+.main {
+  margin-top: 50px;
+  width: 60%;
+
+  /* background-color: orange; */
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.main h2 {
+  opacity: 0.6;
+}
+.left {
+  width: 500px;
+  /* background-color: white; */
+  color: red;
+  position: relative;
+  left: -500px;
+}
+.right {
+  text-align: right;
+  /* background-color: white; */
+  color: red;
+  position: relative;
+  right: -500px;
+}
+.k-div {
+  width: 600px;
+  /* background-color: green; */
+  margin-bottom: 50px;
+}
+footer {
+  height: 5rem;
+  font-weight: 500;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  opacity: 0.6;
+}
+.footer-left {
+  width: 50%;
+  /* background-color: yellow; */
+  padding: 50px;
+}
+.footer-left a {
+  cursor: pointer;
+}
+.footer-right {
+  position: relative;
+  /* background-color: olivedrab; */
+  width: 40%;
+  display: flex;
+  font-display: row;
+  justify-content: flex-end;
+  gap: 30px;
+}
+.footer-right a {
+  opacity: 0.6;
+  color: white;
+  font-size: 2rem;
+  margin: 30px;
+}
+.img-2 {
+  margin: 50px;
+  /* background-color: red; */
+  position: relative;
+  max-width: 30%;
+  max-height: 70vh;
+  border-radius: 10%;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.img-2 img {
+  width: 100%;
+  height: 100%;
+  object-position: center;
+}
+/* }
+----------------MEDIA QUERIES----------- */
+/* Common styles for all screen sizes */
+
+/* Common styles for all screen sizes */
+
+@media only screen and (max-width: 768px) {
+  /* Styles for screens up to 768px (e.g., tablets and large phones) */
+  body {
+    font-size: 10px;
+  }
+
+  .nav-right {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .ul {
+    margin-left: 0;
+    text-align: center;
+    padding: 10px;
+  }
+
+  li {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .menu {
+    position: static;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .content {
+    /* background-color: green; */
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .text {
+    font-size: 1.5rem;
+    display: block;
+    /* background-color: yellow; */
+    padding-left: 0;
+  }
+
+  .centre-line {
+    display: none;
+  }
+  #scroll {
+    min-height: 100vh;
+  }
+  .main {
+    margin-top: 40%;
+    width: 100%;
+  }
+
+  .left {
+    font-size: 3rem;
+    left: -300px;
+  }
+  .left,
+  .right {
+    width: 100%;
+    text-align: center;
+    position: static;
+    transform: none;
+  }
+
+  .k-div {
+    width: 100%;
+  }
+
+  footer {
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-left,
+  .footer-right {
+    width: 100%;
+  }
+
+  .img-2 {
+    margin: 20px;
+    max-width: 100%;
+    max-height: none;
+  }
+
+  /* Adjust GSAP animations for smaller screens */
+  .nav-left,
+  .portfolio,
+  .centre-line,
+  .img-container,
+  .text,
+  .iam,
+  .img-2,
+  .left,
+  .right {
+    opacity: 1;
+    transform: none;
+  }
+  .left {
+    background-color: blue;
+    left: -50px;
+  }
+  .footer-right {
+    background-color: green;
+    font-size: 2rem;
+  }
+}
+
+/* Additional media queries for smaller screens if needed */
+
+@media only screen and (max-width: 480px) {
+  /* Styles for screens up to 480px (e.g., small phones) */
+  body {
+    font-size: 1.5rem;
+  }
+}
