@@ -160,7 +160,7 @@ function animateMobile() {
       start: "top 85%",
       end: "10% 30%",
       scrub: true,
-      markers: true,
+      markers: false,
       toggleActions: "play reverse play reverse",
     },
   });
