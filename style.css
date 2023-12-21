@@ -262,6 +262,9 @@ footer {
   .img-2 {
     max-height: 40%;
   }
+  .img-2 img {
+    overflow: hidden;
+  }
   .main {
     align-self: center;
     margin-top: 1rem !important;
