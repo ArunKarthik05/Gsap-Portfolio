@@ -160,12 +160,12 @@ function animateMobile() {
       start: "top 85%",
       end: "10% 30%",
       scrub: true,
-      markers: false,
+      markers: true,
       toggleActions: "play reverse play reverse",
     },
   });
   g1.to(".left", {
-    x: 20,
+    x: 1,
   });
   let g2 = gsap.timeline({
     scrollTrigger: {
