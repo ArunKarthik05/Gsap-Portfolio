@@ -5,10 +5,12 @@
   box-sizing: border-box;
   overflow: hidden;
 }
+html {
+  font-size: 10px !important;
+}
 body {
   font-family: "Oswald";
-  letter-spacing: 2px;
-  font-size: 3rem;
+  letter-spacing: 0.2rem;
   background-color: black;
   color: white;
   scroll-behavior: smooth;
@@ -16,35 +18,49 @@ body {
 .centre-line {
   position: absolute;
   left: 50%;
-  height: 75vh;
-  top: 17%;
-  width: 10px;
+  min-height: 75vh;
+  width: 0.8rem;
   background-color: red;
+}
+.gsp {
+  color: red;
 }
 /* ------navbar------- */
 nav {
   opacity: 0.9;
-  padding: 20px 20px 20px 0;
+  min-height: 10rem;
+  max-width: 95%;
+  padding: 0.3rem 0.2rem 0.1rem 0.2rem;
   z-index: 2;
-  font-size: 1rem;
-  font-weight: 700;
+  font-size: 2rem;
+  font-weight: 800;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
 }
+.nav-left {
+  min-width: 50%;
+  /* background-color: green; */
+  padding-left: 10%;
+}
 .nav-right {
+  font-size: 1.5rem;
+  /* background-color: yellow; */
   display: inline-flex;
+  min-width: 50%;
 }
 .ul {
-  margin-left: 200px;
-  text-align: right;
+  position: relative;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
 }
 li {
   list-style: none;
-  width: 200px;
-  display: inline-block;
 }
 
 li a {
@@ -52,10 +68,10 @@ li a {
   text-decoration: none;
 }
 .menu {
+  /* background-color: beige; */
   cursor: pointer;
-  position: absolute;
-  right: 20px;
-  align-self: flex-end;
+  position: relative;
+  right: 0.5rem;
 }
 .menu a {
   color: red;
@@ -68,41 +84,61 @@ li a {
 }
 .content {
   /* background-color: yellow; */
-  height: 80vh;
+  font-size: 5rem;
+  min-height: 80vh;
+  opacity: 0.8;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
 }
 .img-container {
-  margin-left: 100px;
-  font-size: 5rem;
+  margin-left: 10rem;
+
   font-weight: 500;
-  opacity: 0.7;
   width: 50%;
   position: relative;
   /* background-color: red; */
 }
+.left {
+  min-width: 50rem;
+  /* background-color: white; */
+  color: red;
+  position: relative;
+  left: -50rem;
+}
+.right {
+  text-align: right;
+  /* background-color: white; */
+  color: red;
+  position: relative;
+  right: -50rem;
+}
 .fst {
+  font-size: 8rem;
   color: red;
 }
 .fst-rem {
   color: white;
 }
 .text {
+  padding: 2rem;
+  min-width: 40%;
+  /* opacity: 0.8; */
+}
+.text .welcome {
   /* padding-left: 100px; */
-  opacity: 0.8;
+  font-size: 8rem;
+  opacity: 0.6;
+  font-weight: 600;
   /* background-color: blueviolet; */
 }
-#scroll {
-  width: 100%;
-  height: 80vh;
-  display: flex;
-  flex-direction: row;
-  /* background-color: white; */
+.text .welcome-2 {
+  font-size: 8rem;
+  font-weight: 600;
 }
 .main {
-  margin-top: 50px;
+  margin-top: 0.5rem;
   width: 60%;
 
   /* background-color: orange; */
@@ -111,28 +147,30 @@ li a {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  opacity: 0.8;
 }
-.main h2 {
+#scroll {
+  margin: 1rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  /* background-color: white; */
+}
+.iam {
+  margin-top: 3rem;
+  font-size: 5rem;
   opacity: 0.6;
 }
-.left {
-  width: 500px;
-  /* background-color: white; */
-  color: red;
-  position: relative;
-  left: -500px;
-}
-.right {
-  text-align: right;
-  /* background-color: white; */
-  color: red;
-  position: relative;
-  right: -500px;
+.a-div {
+  min-height: 20%;
+  font-size: 3rem;
+  /* background-color: beige; */
+  margin-top: 5rem;
 }
 .k-div {
-  width: 600px;
+  width: 60rem;
   /* background-color: green; */
-  margin-bottom: 50px;
+  font-size: 3rem;
 }
 footer {
   height: 5rem;
@@ -157,12 +195,11 @@ footer {
   /* background-color: olivedrab; */
   width: 40%;
   display: flex;
-  font-display: row;
-  justify-content: flex-end;
+  flex-direction: row;
+  justify-content: center;
   gap: 30px;
 }
 .footer-right a {
-  opacity: 0.6;
   color: white;
   font-size: 2rem;
   margin: 30px;
@@ -174,79 +211,118 @@ footer {
   max-width: 30%;
   max-height: 70vh;
   border-radius: 10%;
-  overflow: hidden;
   opacity: 0;
 }
 
 .img-2 img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
   object-position: center;
+  overflow: hidden;
 }
 /* }
 ----------------MEDIA QUERIES----------- */
-/* Common styles for all screen sizes */
-
-/* Common styles for all screen sizes */
-
-@media only screen and (max-width: 768px) {
-  /* Styles for screens up to 768px (e.g., tablets and large phones) */
-  body {
-    font-size: 10px;
+@media (max-width: 1000px) {
+  .fst,
+  .welcome,
+  .welcome-2 {
+    font-size: 6rem !important;
   }
-
-  .nav-right {
-    display: block;
-    text-align: center;
-    margin-top: 10px;
+}
+@media (max-width: 820px) {
+  .centre-line {
+    display: none;
   }
-
-  .ul {
-    margin-left: 0;
-    text-align: center;
-    padding: 10px;
-  }
-
-  li {
-    display: block;
-    margin-bottom: 10px;
-  }
-
-  .menu {
-    position: static;
-    margin-top: 10px;
-    text-align: center;
-  }
-
   .content {
-    /* background-color: green; */
+    font-size: 8rem;
+    max-height: 40vh;
+    /* background-color: violet; */
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .img-container {
+    align-self: center;
+
+    padding: 3rem 3rem;
+    margin-left: 0;
+    min-width: 100%;
+    /* background-color: blue; */
+    min-height: 40%;
+    text-align: center;
+  }
+  #scroll {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between !important;
+    /* background-color: yellow; */
     min-height: 100vh;
+  }
+  .img-2 {
+    max-height: 40%;
+  }
+  .main {
+    align-self: center;
+    margin-top: 1rem !important;
+    margin: 2rem;
+    min-width: 80%;
+    /* background-color: blue; */
+  }
+  footer {
+    margin: 1rem;
+    min-width: 90%;
+    min-height: 20rem;
+    /* background-color: orange; */
+    position: absolute !important;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    text-align: center;
+    justify-content: start;
+  }
+  .footer-left,
+  .footer-right {
+    min-width: 100% !important;
+  }
+}
+@media (max-width: 768px) {
+  /* Styles for screens up to 768px (e.g., tablets and large phones) */
+  nav {
+    display: flex;
+    flex-direction: column;
+  }
+  .nav-left {
+    align-self: center;
+    margin-top: 0.3rem;
+    padding: 0.2rem;
+    /* background-color: #fff; */
+  }
+  .nav-right {
+    min-width: 90%;
+  }
+  .gsp {
+    margin-left: 30%;
+  }
+  .content {
+    /* background-color: green; */
+    max-height: 80vh;
   }
 
   .text {
     font-size: 1.5rem;
     display: block;
+    text-align: center;
     /* background-color: yellow; */
     padding-left: 0;
   }
 
-  .centre-line {
-    display: none;
-  }
-  #scroll {
-    min-height: 100vh;
-  }
   .main {
     margin-top: 40%;
     width: 100%;
   }
 
   .left {
-    font-size: 3rem;
+    font-size: 6rem;
     left: -300px;
   }
   .left,
@@ -261,51 +337,41 @@ footer {
     width: 100%;
   }
 
-  footer {
-    flex-direction: row;
-    align-items: center;
-    text-align: center;
-  }
-
-  .footer-left,
-  .footer-right {
-    width: 100%;
-  }
-
   .img-2 {
     margin: 20px;
-    max-width: 100%;
-    max-height: none;
+    min-width: 85%;
+    height: 60%;
   }
 
-  /* Adjust GSAP animations for smaller screens */
-  .nav-left,
-  .portfolio,
-  .centre-line,
-  .img-container,
-  .text,
-  .iam,
-  .img-2,
-  .left,
-  .right {
-    opacity: 1;
-    transform: none;
-  }
   .left {
-    background-color: blue;
+    /* background-color: blue; */
     left: -50px;
   }
-  .footer-right {
-    background-color: green;
-    font-size: 2rem;
+}
+@media (max-width: 640px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-right {
+    min-width: 90%;
   }
 }
+@media (max-width: 480px) {
+  .fst,
+  .welcome,
+  .welcome-2 {
+    font-size: 4rem !important;
+  }
 
-/* Additional media queries for smaller screens if needed */
-
-@media only screen and (max-width: 480px) {
+  .nav-left {
+    min-width: 80vw;
+  }
   /* Styles for screens up to 480px (e.g., small phones) */
-  body {
-    font-size: 1.5rem;
+
+  .content {
+    /* background-color: green; */
+    margin: 2rem;
   }
 }

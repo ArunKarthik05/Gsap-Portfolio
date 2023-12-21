@@ -62,32 +62,7 @@ TweenMax.fromTo(
   }
 );
 // ------------------------Scroll triggers------------------
-let g1 = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".left",
-    start: "-60% 85%",
-    end: "50% 30%",
-    scrub: true,
-    markers: false,
-    toggleActions: "play reverse play reverse",
-  },
-});
-g1.to(".left", {
-  x: 700,
-});
-let g2 = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".right",
-    start: "-75% 85%",
-    end: "40% 30%",
-    scrub: true,
-    markers: false,
-    toggleActions: "play reverse play reverse",
-  },
-});
-g2.to(".right", {
-  x: -800,
-});
+
 // -----------image------------
 // TweenMax.fromTo(
 //   ".img-2",
@@ -103,19 +78,6 @@ g2.to(".right", {
 // );
 gsap.registerPlugin(ScrollTrigger);
 
-let g3 = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".img-2",
-    start: "70% 80%",
-    end: "bottom 20%",
-    scrub: false,
-    markers: false,
-    toggleActions: "play reverse play reverse",
-  },
-});
-g3.to(".img-2", {
-  opacity: 0.8,
-});
 let g4 = gsap.timeline({
   scrollTrigger: {
     trigger: ".iam",
@@ -136,3 +98,99 @@ function raf(time) {
 }
 
 requestAnimationFrame(raf);
+
+// Listen for window resize events and update animations
+window.addEventListener("resize", handleAnimations);
+handleAnimations();
+function handleAnimations() {
+  const isMobile = window.innerWidth <= 820;
+  // Adjust the breakpoint as needed
+  if (isMobile === true) {
+    animateMobile();
+  } else {
+    animateDesktop();
+  }
+}
+function animateDesktop() {
+  let g1 = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".left",
+      start: "-60% 85%",
+      end: "50% 30%",
+      scrub: true,
+      markers: false,
+      toggleActions: "play reverse play reverse",
+    },
+  });
+  g1.to(".left", {
+    x: 700,
+  });
+  let g2 = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".right",
+      start: "-75% 85%",
+      end: "40% 30%",
+      scrub: true,
+      markers: false,
+      toggleActions: "play reverse play reverse",
+    },
+  });
+  g2.to(".right", {
+    x: -800,
+  });
+  let g3 = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".img-2",
+      start: "70% 80%",
+      end: "bottom 20%",
+      scrub: false,
+      markers: false,
+      toggleActions: "play reverse play reverse",
+    },
+  });
+  g3.to(".img-2", {
+    opacity: 0.8,
+  });
+}
+
+function animateMobile() {
+  let g1 = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".left",
+      start: "top 85%",
+      end: "10% 30%",
+      scrub: true,
+      markers: false,
+      toggleActions: "play reverse play reverse",
+    },
+  });
+  g1.to(".left", {
+    x: 20,
+  });
+  let g2 = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".right",
+      start: "-75% 85%",
+      end: "40% 30%",
+      scrub: true,
+      markers: false,
+      toggleActions: "play reverse play reverse",
+    },
+  });
+  g2.to(".right", {
+    x: 20,
+  });
+  let g3 = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".img-2",
+      start: "70% 90%%",
+      end: "bottom 20%",
+      scrub: false,
+      markers: false,
+      toggleActions: "play reverse play reverse",
+    },
+  });
+  g3.to(".img-2", {
+    opacity: 0.8,
+  });
+}
